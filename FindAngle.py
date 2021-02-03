@@ -13,7 +13,7 @@ def calculate_angle():  # tan^-1((m2-m1)/(1+m2*m1))
     m1 = calculate_slope(points[0], points[1])
     m2 = calculate_slope(points[0], points[2])
     radian = math.atan((m2 - m1) / 1 + (m1 * m2))
-    return round(math.degrees(radian))
+    return abs(int(math.degrees(radian)))
 
 
 def get_point(event, x, y, _, __):
